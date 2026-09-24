@@ -1,5 +1,5 @@
 <decoder name="suricata-pfsense-alert">
-  <prematch>SURICATA</prematch>
+  <prematch type="pcre2">\[1:\d+:\d+\]</prematch>
   <regex type="pcre2">\[1:(\d+):\d+\] (\S.+) \[Classification: (\S.+)\] \[Priority: (\d+)\] \{(\S+)\} (\S+):(\d+) -> (\S+):(\d+)</regex>
   <order>id, description, classification, priority, protocol, srcip, srcport, dstip, dstport</order>
 </decoder>

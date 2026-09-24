@@ -3,4 +3,12 @@
     <decoded_as>suricata-pfsense-alert</decoded_as>
     <description>Suricata Alert on pfSense: $(description)</description>
   </rule>
+  <rule id="100101" level="8">
+  <if_sid>100100</if_sid>
+  <field name="description">SSH</field>
+  <description>Suricata: SSH protocol anomaly on honeypot service ($(srcip):$(srcport) -> $(dstip):$(dstport))</description>
+  <mitre>
+    <id>T1021.004</id>
+  </mitre>
+</rule>
 </group>
